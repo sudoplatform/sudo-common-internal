@@ -1,0 +1,7 @@
+# Defined as a stub as this mutation is only used for graphql
+# generation and does not get deployed externally to appsync
+mutation CreatePublicKeyForService($input: CreatePublicKeyInput!) {
+  createPublicKeyForService(input: $input) {
+    ...PublicKey
+  }
+}

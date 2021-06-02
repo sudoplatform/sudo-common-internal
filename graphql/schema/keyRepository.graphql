@@ -1,0 +1,43 @@
+enum KeyFormat {
+  # PKCS#1 RSA Public Key
+  RSA_PUBLIC_KEY
+
+  # X.509 SubjectPublicKeyInfo
+  SPKI
+}
+
+input CreatePublicKeyInput {
+	keyId: String!
+	keyRingId: String!
+	algorithm: String!
+	keyFormat: KeyFormat
+	publicKey: String!
+}
+
+type PaginatedPublicKey {
+	items: [PublicKey!]!
+	nextToken: String
+}
+
+type PublicKey {
+	id: ID!
+	keyId: String!
+	keyRingId: String!
+	algorithm: String!
+	keyFormat: KeyFormat
+	publicKey: String!
+	owner: ID!
+	version: Int!
+	createdAtEpochMs: Float!
+	updatedAtEpochMs: Float!
+}
+
+type Query {
+  getPublicKeyForService(keyId: String!): PublicKey
+	getPublicKeysForService(limit: Int, nextToken: String): PaginatedPublicKey!
+	getKeyRingForService(keyRingId: String!, limit: Int, nextToken: String): PaginatedPublicKey!
+}
+
+type Mutation {
+  createPublicKeyForService(input: CreatePublicKeyInput!): PublicKey!
+}

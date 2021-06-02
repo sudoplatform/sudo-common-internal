@@ -1,0 +1,19 @@
+# Define stubs for these queries as they are only used for graphql
+# generation and do not get deployed externally to appsync
+query GetKeyRingForService($keyRingId: String!, $limit: Int, $nextToken: String) {
+  getKeyRingForService(keyRingId: $keyRingId, limit: $limit, nextToken: $nextToken) {
+    ...PaginatedPublicKey
+  }
+}
+
+query GetPublicKeyForService($keyId: String!) {
+  getPublicKeyForService(keyId: $keyId) {
+    ...PublicKey
+  }
+}
+
+query GetPublicKeysForService($limit: Int, $nextToken: String) {
+  getPublicKeysForService(limit: $limit, nextToken: $nextToken) {
+    ...PaginatedPublicKey
+  }
+}
