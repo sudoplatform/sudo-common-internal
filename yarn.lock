@@ -1839,10 +1839,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@sudoplatform/sudo-api-client@^8.0.1":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@sudoplatform/sudo-api-client/-/sudo-api-client-8.0.1.tgz#6d4d703da0be270a10efaa9a607183c2428af470"
-  integrity sha512-T8cYMOD03rhhMuiq3GO9NvqK6Ee2hdjq3VeaVXeAVu+BfJvdzQBLBRtd1QE9KWcZAngCrmAq1/YZw9ps+MbYHw==
+"@sudoplatform/sudo-api-client@^8.0.6":
+  version "8.0.6"
+  resolved "https://registry.yarnpkg.com/@sudoplatform/sudo-api-client/-/sudo-api-client-8.0.6.tgz#0208610b934afe45d05f374b189dbad88bb83a97"
+  integrity sha512-p3+EpWGvTB2VwnDeXfMKPyBQ/Kk7EeHpYhlnzzVhAV0Kh3EvwoCIFCw85nvVEa+DhKA7uQCqierYzYjKkIyjhg==
   dependencies:
     "@redux-offline/redux-offline" "^2.6.0-native.0"
     "@types/graphql" "^14.5.0"
@@ -1851,37 +1851,38 @@
     apollo-link "1.2.14"
     apollo-link-context "^1.0.20"
     apollo-link-http "^1.5.17"
-    aws-appsync "^4.0.3"
+    aws-appsync "4.0.3"
 
-"@sudoplatform/sudo-common@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@sudoplatform/sudo-common/-/sudo-common-5.0.1.tgz#447d3ff6628a3ac8eeec72af623551283a76930f"
-  integrity sha512-8v6jRe1JxTQTFVAJBBChRUhE4oTNt4BFPJzfGCfS9Gfs1lbWbfJPATVViyUIFnVbl8CPNp/3GETEd8508jY7Tg==
+"@sudoplatform/sudo-common@^5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@sudoplatform/sudo-common/-/sudo-common-5.2.1.tgz#c96098996755c8dca35d440fbbcb337bdfae0aee"
+  integrity sha512-rVvFaVtnFCD9JAqPlyr5tozl2UK3BaQO1LymqPICBh3w8MLp2mFdrjmdpI+GG9qiOg3vQd9j/FEXqE15UMOzXw==
   dependencies:
     browser-bunyan "^1.6.3"
 
-"@sudoplatform/sudo-user@^8.0.1":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@sudoplatform/sudo-user/-/sudo-user-8.0.1.tgz#4ed2de745bf9e446100691d0b55412efc0aa354c"
-  integrity sha512-Pp6vY2ekoFxEllVQgXS4bPBqFr24pEBCLk9k5fW2j93RJhNc38OEgQLIIuZ1Ogelt92ZOyZgwOkG3tFfQVthlA==
+"@sudoplatform/sudo-user@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@sudoplatform/sudo-user/-/sudo-user-9.0.0.tgz#fc551483621df8f3dafd7a2fe15b9e4287bf825e"
+  integrity sha512-IsxNRPIsTFLAZ+rHqtKGBXaweX58+3/8KTuPy3DNb+HCPnyRwZkYp9BSxC14eCumjBxOg/GvEhdmyfQP70NbTQ==
   dependencies:
     "@graphql-typed-document-node/core" "^3.1.0"
-    "@sudoplatform/sudo-web-crypto-provider" "^1.0.1"
+    "@sudoplatform/sudo-web-crypto-provider" "^1.0.2"
     amazon-cognito-auth-js "^1.3.3"
     apollo-cache-inmemory "^1.6.6"
     asn1js "^2.1.1"
     aws-appsync "^4.0.0"
     aws-sdk "^2.903.0"
-    graphql "^15.3.0"
+    graphql "^15.5.1"
     jsonwebtoken "^8.5.0"
     lodash "^4.17.20"
-    node-localstorage "^2.1.6"
+    node-localstorage "^2.2.1"
+    tslib "^2.3.0"
     uuid "^8.3.1"
 
-"@sudoplatform/sudo-web-crypto-provider@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@sudoplatform/sudo-web-crypto-provider/-/sudo-web-crypto-provider-1.0.1.tgz#504af4f6f50a7053b57fb18a363b98b53bdc009b"
-  integrity sha512-ykBmMCju86B1YuJ42lfze8irWRgMPai72+9pN3abq5K0TR8kCwknS/t8hbjvB1aMLB0ZMYYJHHY+aWb5fjOJ8w==
+"@sudoplatform/sudo-web-crypto-provider@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@sudoplatform/sudo-web-crypto-provider/-/sudo-web-crypto-provider-1.0.2.tgz#b0d6838721c8e00bd90133e11e8f2293ff2d605a"
+  integrity sha512-3qxauV+mwnQquLKS06a+PQ0mJh0iLHt/RIL6cN7Ap8BAHDFiwZCSXJJzHjW0N6iICDxPvQLfEO4z2FX0YFuZDw==
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
@@ -2621,7 +2622,7 @@ aws-appsync-subscription-link@^2.2.1:
     debug "2.6.9"
     url "^0.11.0"
 
-aws-appsync@^4.0.0, aws-appsync@^4.0.3:
+aws-appsync@4.0.3, aws-appsync@^4.0.0, aws-appsync@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/aws-appsync/-/aws-appsync-4.0.3.tgz#2233b482cce1d0316fb581e113d6fec22d91d3ea"
   integrity sha512-ld6hgunSewQzTwQui9Rj2Adzj8ikVLaurPU732/Ci85edvyyYmqCoWZqG8EZZFvNdz7tIYFolJD7BsiggTTwJQ==
@@ -4230,15 +4231,7 @@ get-value@^2.0.3, get-value@^2.0.6:
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
-glob-parent@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-3.1.0.tgz#9e6af6299d8d3bd2bd40430832bd113df906c5ae"
-  integrity sha1-nmr2KZ2NO9K9QEMIMr0RPfkGxa4=
-  dependencies:
-    is-glob "^3.1.0"
-    path-dirname "^1.0.0"
-
-glob-parent@^5.0.0, glob-parent@^5.1.0, glob-parent@~5.1.0:
+glob-parent@^3.1.0, glob-parent@^5.0.0, glob-parent@^5.1.0, glob-parent@^5.1.2, glob-parent@~5.1.0:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
   integrity sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==
@@ -4364,7 +4357,7 @@ graphql-ws@^4.4.1:
   resolved "https://registry.yarnpkg.com/graphql-ws/-/graphql-ws-4.4.3.tgz#9f93a1e9cbf670aaf12cb21b1e407e72f9010f9d"
   integrity sha512-ScOHcOorfE3fsmdRe21G6cXUmX7ANVB6tUWJXQVo5V5dilQHR/3CI/r/kB2g0JLgSuKOt9kXZotGbe64Igsm0Q==
 
-graphql@*, graphql@^15.3.0, graphql@^15.5.0:
+graphql@*, graphql@^15.5.0:
   version "15.5.0"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.5.0.tgz#39d19494dbe69d1ea719915b578bf920344a69d5"
   integrity sha512-OmaM7y0kaK31NKG31q4YbD2beNYa6jBBKtMFT6gLYJljHLJr42IqJ8KX08u3Li/0ifzTU5HjmoOOrwa5BRLeDA==
@@ -4375,6 +4368,11 @@ graphql@0.13.0:
   integrity sha512-WlO+ZJT9aY3YrBT+H5Kk+eVb3OVVehB9iRD/xqeHdmrrn4AFl5FIcOpfHz/vnBr6Y6JthGMlnFqU8XRnDjSR7A==
   dependencies:
     iterall "1.1.x"
+
+graphql@^15.5.1:
+  version "15.5.1"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.5.1.tgz#f2f84415d8985e7b84731e7f3536f8bb9d383aad"
+  integrity sha512-FeTRX67T3LoE3LWAxxOlW2K3Bz+rMYAC18rRguK4wgXaTZMiJwSUwDmPFo3UadAKbzirKIg5Qy+sNJXbpPRnQw==
 
 handlebars@^4.7.2:
   version "4.7.7"
@@ -4771,7 +4769,7 @@ is-extendable@^1.0.1:
   dependencies:
     is-plain-object "^2.0.4"
 
-is-extglob@^2.1.0, is-extglob@^2.1.1:
+is-extglob@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/is-extglob/-/is-extglob-2.1.1.tgz#a88c02535791f02ed37c76a1b9ea9773c833f8c2"
   integrity sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=
@@ -4804,13 +4802,6 @@ is-glob@4.0.1, is-glob@^4.0.0, is-glob@^4.0.1, is-glob@~4.0.1:
   integrity sha512-5G0tKtBTFImOqDnLB2hG6Bp2qcKEFduo4tZu9MT/H6NQv/ghhy30o55ufafxJ/LdH79LLs2Kfrn85TLKyA7BUg==
   dependencies:
     is-extglob "^2.1.1"
-
-is-glob@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/is-glob/-/is-glob-3.1.0.tgz#7ba5ae24217804ac70707b96922567486cc3e84a"
-  integrity sha1-e6WuJCF4BKxwcHuWkiVnSGzD6Eo=
-  dependencies:
-    is-extglob "^2.1.0"
 
 is-lower-case@^2.0.2:
   version "2.0.2"
@@ -6186,10 +6177,10 @@ node-int64@^0.4.0:
   resolved "https://registry.yarnpkg.com/node-int64/-/node-int64-0.4.0.tgz#87a9065cdb355d3182d8f94ce11188b825c68a3b"
   integrity sha1-h6kGXNs1XTGC2PlM4RGIuCXGijs=
 
-node-localstorage@^2.1.6:
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/node-localstorage/-/node-localstorage-2.1.6.tgz#7c62120beff8abbf960c858da70fddcfc336898a"
-  integrity sha512-yE7AycE5G2hU55d+F7Ona9nx97C+enJzWWx6jrsji7fuPZFJOvuW3X/LKKAcXRBcEIJPDOKt8ZiFWFmShR/irg==
+node-localstorage@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/node-localstorage/-/node-localstorage-2.2.1.tgz#869723550a4883e426cb391d2df0b563a51c7c1c"
+  integrity sha512-vv8fJuOUCCvSPjDjBLlMqYMHob4aGjkmrkaE42/mZr0VT+ZAU10jRF8oTnX9+pgU9/vYJ8P7YT3Vd6ajkmzSCw==
   dependencies:
     write-file-atomic "^1.1.4"
 
@@ -6225,10 +6216,10 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
   integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
 
-normalize-url@^4.1.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.5.0.tgz#453354087e6ca96957bd8f5baf753f5982142129"
-  integrity sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
+normalize-url@^4.1.0, normalize-url@^6.0.1:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-6.1.0.tgz#40d0885b535deffe3f3147bec877d05fe4c5668a"
+  integrity sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A==
 
 npm-run-all@^4.1.5:
   version "4.1.5"
@@ -6548,11 +6539,6 @@ path-case@^3.0.4:
   dependencies:
     dot-case "^3.0.4"
     tslib "^2.0.3"
-
-path-dirname@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/path-dirname/-/path-dirname-1.0.2.tgz#cc33d24d525e099a5388c0336c6e32b9160609e0"
-  integrity sha1-zDPSTVJeCZpTiMAzbG4yuRYGCeA=
 
 path-exists@^3.0.0:
   version "3.0.0"
@@ -7843,6 +7829,11 @@ tslib@^2, tslib@^2.0.0, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.2.0, tslib@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
   integrity sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==
+
+tslib@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
+  integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
 
 tslib@~2.0.1:
   version "2.0.3"
