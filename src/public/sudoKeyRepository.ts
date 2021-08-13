@@ -1,3 +1,4 @@
+import { ApiClientManager } from '@sudoplatform/sudo-api-client'
 import {
   CachePolicy,
   DefaultLogger,
@@ -6,15 +7,15 @@ import {
   SudoKeyManager,
 } from '@sudoplatform/sudo-common'
 import { SudoUserClient } from '@sudoplatform/sudo-user'
+import { WebSudoCryptoProvider } from '@sudoplatform/sudo-web-crypto-provider'
 import { PaginatedPublicKey } from '../gen/graphqlTypes'
 import { ApiClient } from '../private/client/apiClient'
 import { FetchPolicyTransformer } from '../private/transformers/fetchPolicyTransformer'
+import KeyEntityFormatTransformer from '../private/transformers/keyEntityFormatTransformer'
 import KeyEntityTransformer from '../private/transformers/keyEntityTransformer'
 import { DefaultKeyWorker, KeyWorker } from '../private/workers/keyWorker'
 import { PublicKeyEntity } from './types/publicKeyEntity'
-import { WebSudoCryptoProvider } from '@sudoplatform/sudo-web-crypto-provider'
 import { UnsealInput } from './types/unsealInput'
-import KeyEntityFormatTransformer from '../private/transformers/keyEntityFormatTransformer'
 
 /**
  * Representation of a public/private key pair repository used in business logic.
@@ -93,6 +94,11 @@ export type SudoKeyRepositoryOptions = {
    */
   rsaKeySize?: number
 
+  /**
+   * API client manager to use. No default
+   */
+  apiClientManager?: ApiClientManager
+
   /** Undocumented */
   apiClient?: ApiClient
 }
@@ -123,7 +129,9 @@ export class DefaultSudoKeyRepository implements SudoKeyRepository {
       opts.keyRingNameSpace,
       opts.rsaKeySize,
     )
-    this.apiClient = opts.apiClient ?? new ApiClient(opts.keyRingNameSpace)
+    this.apiClient =
+      opts.apiClient ??
+      new ApiClient(opts.keyRingNameSpace, opts.apiClientManager)
     this.keyTransformer = new KeyEntityTransformer()
     this.keyFormatTransformer = new KeyEntityFormatTransformer()
     this.fetchPolicyTransformer = new FetchPolicyTransformer()
