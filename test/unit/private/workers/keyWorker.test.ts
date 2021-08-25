@@ -46,7 +46,7 @@ describe('DefaultKeyWorker test suite', () => {
     when(mockSudoKeyManager.getPublicKey(anything())).thenResolve(
       KeyDataFactory.keyManagerPublicKey,
     )
-    when(mockSudoUserClient.getSubject()).thenReturn(sub)
+    when(mockSudoUserClient.getSubject()).thenResolve(sub)
   })
 
   it('getCurrentPublicKey returns undefined when there is no currentPublicKey', async () => {
@@ -111,8 +111,8 @@ describe('DefaultKeyWorker test suite', () => {
 
     const currentPublicKey = await instanceUnderTest.getCurrentPublicKey()
     logger.debug(`currentPublicKey is ${JSON.stringify(currentPublicKey)}`)
-    expect(currentPublicKey.keyId).toEqual(testKeyPairIdString)
-    expect(currentPublicKey.keyRingId).toEqual(
+    expect(currentPublicKey?.keyId).toEqual(testKeyPairIdString)
+    expect(currentPublicKey?.keyRingId).toEqual(
       KeyDataFactory.generatedPublicKeyEntity.keyRingId,
     )
 

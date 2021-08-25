@@ -191,6 +191,6 @@ export class DefaultSudoKeyRepository implements SudoKeyRepository {
   }
 
   async unsealString(input: UnsealInput): Promise<string> {
-    return this.keyWorker.unsealString(input)
+    return await this.keyWorker.unsealString(input)
   }
 }

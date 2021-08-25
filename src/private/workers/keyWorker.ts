@@ -53,7 +53,7 @@ export class DefaultKeyWorker implements KeyWorker {
       throw new FatalError('Could not generate public key pair')
     }
 
-    const subject = this.sudoUserClient.getSubject()
+    const subject = await this.sudoUserClient.getSubject()
     if (!subject) {
       throw new NotSignedInError()
     }
@@ -92,7 +92,7 @@ export class DefaultKeyWorker implements KeyWorker {
       return undefined
     }
 
-    const subject = this.sudoUserClient.getSubject()
+    const subject = await this.sudoUserClient.getSubject()
     if (!subject) {
       throw new NotSignedInError()
     }
